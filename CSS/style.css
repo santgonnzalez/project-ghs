@@ -1,0 +1,85 @@
+/* General styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100%;
+}
+
+.container-grid {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.container-grid {
+    display: grid;
+    gap: 5px;
+    grid-template: 
+    "header"  100px
+    "navBar"  50px
+    "main"    auto
+    "sideBar" 100px
+    "footer"  100px
+    
+    ;
+}
+
+.header{
+    grid-area: header;
+    background-color: #85aedc;
+}
+
+.navBar {
+    grid-area: navBar;
+    background-color: #f5f6f6;
+}
+
+.main {
+    grid-area: main;
+    background-color: #afd6af;
+}
+
+.sideBar{
+    grid-area: sideBar;
+    background-color: #afd6ad;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #8c86a0;
+}
+
+@media (min-width: 50em){
+    .container-grid {
+    grid-template-columns: 200px auto;
+    grid-template-rows: ;
+
+    grid-template: 
+    "header header" 100px
+    "navBar navBar" 50px
+    "sideBar main"  auto
+    "footer footer" 100px /
+    100px  auto;  
+    
+}
+}
+
+@media (min-width: 70em){
+    .container-grid {
+        grid-template: 
+        "header header header"  100px
+        "navBar main sideBar"   auto
+        "footer footer footer"  100px /
+        200px   auto   200px    ;
+    }
+}
