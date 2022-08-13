@@ -1,4 +1,7 @@
+
+@charset "UTF-8";
 /* General styling */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -29,7 +32,6 @@ body {
     "navBar"  50px
     "main"    auto
     "sideBar" 100px
-    "footer"  100px
     
     ;
 }
@@ -55,9 +57,112 @@ body {
 }
 
 .footer {
-    grid-area: footer;
-    background-color: #8c86a0;
-}
+    background-color: black;
+    height: auto;
+    width: 100%;
+    border-top: #ffbd59 2px solid; }
+    .footer .footer__diseno {
+      color: whitesmoke;
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      padding-top: 0.2rem;
+      padding-bottom: 0.8rem;
+      font-size: 0.75rem; }
+    .footer .footer__diseno span {
+      color: #ffbd59;
+      margin-right: 0.3rem;
+      margin-left: 0.3rem; }
+    .footer .footer__diseno a {
+      text-decoration: none;
+      color: #ffbd59; }
+    .footer .footer__diseno a:hover {
+      color: #fda219;
+      text-decoration: underline; }
+    .footer .footer__container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+      margin-left: 2rem;
+      /*Creamos el bucle para usar los valores del mapa*/ }
+      .footer .footer__container .footer__container--columna {
+        color: whitesmoke;
+        font-size: 0.9rem; }
+      .footer .footer__container .footer__container--columna p {
+        display: inline-block;
+        margin-left: 0.2rem;
+        margin-bottom: 0.2rem; }
+      .footer .footer__container .footer__container--columna p a {
+        text-decoration: none;
+        color: whitesmoke; }
+      .footer .footer__container .footer__menu {
+        list-style: none;
+        padding: 0; }
+      .footer .footer__container .footer__menu span {
+        color: #ffbd59;
+        margin-right: 0.1rem;
+        margin-left: 0.1rem; }
+      .footer .footer__container .footer__menu a {
+        text-decoration: none;
+        color: whitesmoke;
+        text-transform: uppercase; }
+      .footer .footer__container .footer__menu a:hover {
+        color: #ffbd59; }
+      .footer .footer__container .footer__titulo {
+        font-size: 1.3rem;
+        color: #ffbd59;
+        font-family: "Roboto Mono", monospace;
+        margin-top: 1rem;
+        padding-bottom: 0.2rem; }
+      .footer .footer__container .footer__item {
+        color: #ffbd59;
+        margin-bottom: 0.2rem;
+        margin-right: 0.6rem;
+        text-align: center; }
+      .footer .footer__container .footer__item--fb:hover {
+        color: #3b5998;
+        transform: rotateZ(360deg);
+        transition: 1s; }
+      .footer .footer__container .footer__item--ig:hover {
+        color: crimson;
+        transform: rotateZ(360deg);
+        transition: 1s; }
+      .footer .footer__container .footer__item--tw:hover {
+        color: deepskyblue;
+        transform: rotateZ(360deg);
+        transition: 1s; }
+    @media only screen and (min-width: 768px) {
+      .footer .footer__diseno {
+        font-size: 0.9rem; }
+      .footer .footer__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; }
+        .footer .footer__container .footer__container--columna {
+          color: whitesmoke;
+          font-size: 1rem;
+          line-height: 1.5rem; }
+        .footer .footer__container .footer__titulo {
+          font-size: 1.5rem; } }
+    @media only screen and (min-width: 1024px) {
+      .footer .footer__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; }
+        .footer .footer__container .footer__container--columna {
+          color: whitesmoke;
+          font-size: 0.9rem;
+          line-height: 1.5rem; }
+        .footer .footer__container .footer__titulo {
+          font-size: 1.1rem; } }
+  
+  * {
+    margin: 0;
+    padding: 0; }
 
 @media (min-width: 50em){
     .container-grid {
@@ -68,8 +173,7 @@ body {
     "header header" 100px
     "navBar navBar" 50px
     "sideBar main"  auto
-    "footer footer" 100px /
-    100px  auto;  
+    ;  
     
 }
 }
@@ -79,7 +183,6 @@ body {
         grid-template: 
         "header header header"  100px
         "navBar main sideBar"   auto
-        "footer footer footer"  100px /
-        200px   auto   200px    ;
+    
     }
 }

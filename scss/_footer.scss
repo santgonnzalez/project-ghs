@@ -1,0 +1,144 @@
+@import "generales.scss";
+
+.footer {
+    background-color:$negro;
+    height:auto;
+    width:100%;
+    border-top:$peach 2px solid;
+
+    .footer__diseno {
+        color:$blanco;
+        text-align: center;
+        margin-top:1rem;
+        margin-bottom:0;
+        padding-top: $padding-mobile;
+        padding-bottom:0.8rem;
+        font-size:$font-size-mobile-special;
+    }    
+
+    .footer__diseno span {
+        color:$peach;
+        margin-right:0.3rem;
+        margin-left:0.3rem;
+    }
+    .footer__diseno a {
+        text-decoration: none;
+        color:$peach;
+    }
+    .footer__diseno a:hover {
+        color:$peach-intenso;
+        text-decoration: underline;
+    }
+
+    .footer__container {
+        display:flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        font-family: $contenidos;
+        margin-left: 2rem;
+        
+            .footer__container--columna {
+                color:$blanco;
+                font-size:$font-size-mobile;
+            }
+            
+            .footer__container--columna p {
+                display: inline-block;
+                margin-left: $margin-mobile;
+                margin-bottom:$margin-mobile;
+            }
+            .footer__container--columna p a {
+                text-decoration: none;
+                color:$blanco;
+            }
+            
+        .footer__menu  {
+                list-style: none;
+                padding:0;
+        }
+        .footer__menu span {
+            color:$peach;
+            margin-right:0.1rem;
+            margin-left:0.1rem;
+        }
+        .footer__menu a {
+                text-decoration: none;
+                color:$blanco;
+                text-transform: uppercase;
+        }
+        .footer__menu a:hover {
+            color:$peach;
+        }
+        .footer__titulo {
+            font-size: 1.3rem; 
+            color:$peach;
+            font-family:$principal;
+            margin-top:1rem;
+            padding-bottom:$padding-mobile;
+        }
+        .footer__item {
+            color:$peach;
+            margin-bottom:$margin-mobile;
+            margin-right: $margin-mobile * 3;
+            text-align: center;
+        }
+    
+        $redes: ( /*Declaramos nuestro mapa*/
+            fb:  #3b5998,
+            ig: crimson,
+            tw: deepskyblue
+
+        ); 
+    /*Creamos el bucle para usar los valores del mapa*/
+        @each $red, $color in $redes {
+            .footer__item--#{$red}:hover {
+                color: $color;
+                transform: rotateZ(360deg);
+                transition:1s;
+            }
+        }
+    }
+    @media only screen and (min-width:768px) {
+        .footer__diseno {
+            font-size:$font-size-mobile;   
+        }
+        .footer__container {
+            display:flex;
+            flex-direction:row;
+            justify-content:space-around;
+            font-family: $contenidos;
+            
+                .footer__container--columna {
+                    color:$blanco;
+                    font-size:1rem;
+                    line-height: 1.5rem;
+                }  
+                .footer__titulo {
+                    font-size: 1.5rem;
+                } 
+        } 
+    }
+            
+    @media only screen and (min-width:1024px) {
+        .footer__container {
+            display:flex;
+            flex-direction:row;
+            justify-content:space-around;
+            font-family: $contenidos;
+            
+                .footer__container--columna {
+                    color:$blanco;
+                    font-size:$font-size-mobile;
+                    line-height: 1.5rem;
+                }  
+                .footer__titulo {
+                    font-size: 1.1rem;
+                }          
+        } 
+    } 
+}    
+    
+
+
+
