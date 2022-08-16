@@ -1,5 +1,5 @@
-*
-**
+***
+***
 ***
 GHS
 Servicios profesionales - Aportar valor a nuestros clientes es nuestra prioridad.
