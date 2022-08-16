@@ -227,3 +227,14 @@ body {
 .menu__link:focus {
 	outline: none;
 }
+
+
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+legend {
+  font-weight: bold;
+}
